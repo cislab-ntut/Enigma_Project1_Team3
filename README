@@ -5,3 +5,25 @@
 1051562 藍勤智 johnny910639:提供資料與意見&找到Enigma的雛形code
 1061553 黃品魁 Pinquei:提供資料與意見&找尋bug&找到Enigma的雛形code&plugboard的排列組合
 1063351 張宇翔 Neal3351:將enigma的運作方式寫成code&找到Enigma的雛形code&plugboard的排列組合
+
+變數:
+r: 5 rotor
+refl: reflector
+P: plug board
+start: 三個rotor的起始位置
+arrow: rotor起始的指標
+abc: 用來對應字母用
+times: 轉了幾次
+cycle: 轉了幾圈
+map: 動應plug board
+rotor: 使用的rotor內容
+RotorNum: 使用的rotor號碼
+inputString: 輸入要解密的字串
+finded: 是否解出來
+
+function:
+void spin(int n):旋轉rotor
+int find(const char f[], char c):找index
+char encode(char input):加密
+int main():更改plug board的各種排列組合，然後呼叫runEnigma()，來執行轉盤
+void runEnigma(): 轉動轉盤解密，轉到最後幾個字，看是否為"HEILHITLER"，如果是就代表解出來了
